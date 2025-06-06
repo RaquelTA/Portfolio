@@ -5,21 +5,15 @@
   box-sizing: border-box;
 }
 
-  body {
-   font-family: 'Inter', sans-serif;
-  background: 
-    linear-gradient(
-      rgba(248, 193, 161, 0.7), /* Laranja pastel com menos transparência */
-      rgba(248, 193, 161, 0.7)
-    ), 
-    url('https://i.pinimg.com/736x/df/72/58/df7258c79a123be9e92214ecf576bc91.jpg') repeat;
-  background-color: #fffdfc;
-  color: #333;
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #000000, #8b2e1a, #b34728);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: #000000;
   line-height: 1.6;
   padding: 0 20px;
-  background-size: cover;
 }
-
 /* Cabeçalho */
 header {
   background-color: #f26c4f;
@@ -91,14 +85,15 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Animação */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
+
